@@ -38,3 +38,9 @@ async function fetchUnresolvedTickets() {
   }, []);
 }
 //Task 4
+finally {
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+    }
+    console.log('Reset');
+}
