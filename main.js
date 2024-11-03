@@ -19,8 +19,22 @@ async function fetchUnresolvedTickets() {
     }
     .catch(error) {
         if (error.name === 'TypeError') {
-            throw new Error('Failed to connect to the API. Please check your internet connection.');
+            throw new Error('Failed to connect to the API');
         }
     }
     //Task 3
-    
+      import React, { useState, useEffect } from 'react';
+      import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+      import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+      import { Loader2 } from 'lucide-react';
+
+      const UnresolvedTickets = () => {
+      const [tickets, setTickets] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchTickets();
+  }, []);
+}
+//Task 4
